@@ -1,0 +1,22 @@
+#Router 2950-24 commands
+
+enable #Admin role
+configure terminal #Changes the context to configure the terminal
+hostname XXX #Changes the hostname's name
+line console 0 #Changes the context
+password 123 #Changes the router's password
+login #Forces the router to do login always on terminal access 
+
+#enable->SU do router
+
+vlan database
+vlan 2 name laboratorio
+show vlan
+
+configure terminal
+interface range fastEthernet 02/5 - 5
+switchport mode access
+switchport access vlan 2
+
+interface range fastEthernet 0/1
+switchport mode trunk
