@@ -1,0 +1,10 @@
+enable
+configure terminal
+hostname R1
+int serial 0/0/0
+ip addr 192.168.0.1 255.255.255.0
+clock rate 56000
+no shutdown
+router rip
+network 192.168.0.0
+network 192.168.1.0
